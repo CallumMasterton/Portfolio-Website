@@ -16,6 +16,8 @@ body {
  font-family: Verdana, Arial, sans-serif;
  font-size: 16px;
  color: #fff;}
+
+new ghostCursor();
  
 a img{ border: 0px; }
 
