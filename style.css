@@ -6,26 +6,36 @@
 
 body {
 	background-color: #add8e6;
+	background-image: url("Pictures/Background.png");
 	font-family: pixelFont;
 	overflow: none;
 	font-size: 25px;
 }
+
+.bodySpace{
+	height: 1000px;
+	width: auto;
+	position: relative;
+}
+
 /*Bottom Bar*/
 .bottomBar {
 	overflow: hidden;
 	background-color: #000;
-	
+	border-top: 1px solid black;
 	color: white;
 	position: fixed; /* Set the navbar to fixed position */
 	bottom: 0; /* Position the navbar at the top of the page */
 	left: 0;
 	width: 100%; /* Full width */
+	height: auto;
+	max-height: 100px;
 	
 }
 
 .bottomBarTable {
-	
-	height: 40px;
+
+	height: auto;
 	width: 100%;
 	text-align:left;
 	border-collapse: collapse;
@@ -37,26 +47,25 @@ body {
 
 .bottomBarData:nth-child(1) { 
 	padding-left: 1%;	
-	width: 500px;
+	font-size: 120%;
+	font-weight: normal;
+	width: 20%;
 	background: linear-gradient(to right, #3B77BC 45%, #000 100%);
 	/*border-right: 1px solid white;*/
 }
 
 .bottomBarData:nth-child(2) { 
-	width: 40%;
-	padding-left: 1%;	
-	/*border-left: 1px solid black;
-	border-right: 1px solid black;*/
+	width: 30%;
+	padding-left: 10px;	
+	/*border-left: 5px solid white;
+	border-right: 5px solid white;*/
 }
+
 
 .bottomBarData:nth-child(3) { 
-	width: 35%;
-}
-
-.bottomBarData:nth-child(4) { 
 	text-align:right;
-	padding-right: 1%;
-	width: 10%;	
+
+	width: auto%;	
 	/*border-left: 1px solid white;*/ 
 }
 
@@ -69,7 +78,9 @@ body {
 	padding: 5% 2%; /* Some padding */
 	cursor: pointer; /* Pointer/hand icon */
 	float: left; /* Float the buttons side by side */
-	font-size: 20px;
+	font-size: 100%;
+	width: auto%;
+	height: auto%;
 }
 
 .btn-menu button:hover {
@@ -120,7 +131,7 @@ body {
 }
 
 .name {
-  font-weight: bold;
+  
 
   border-bottom: 2px solid black;
   padding-left: 8px;
@@ -155,7 +166,7 @@ body {
 .tagline {
   padding: 6px 8px;
   font-style: italic;
-  font-size: 15px;
+  font-size: 20px;
   background: #f9f9f9;
   opacity: 0.7;
   border-bottom: 1px solid black;
@@ -163,6 +174,7 @@ body {
 
 .dataBox {
 	padding: 10px;
+	
 	/*border-right: 1px solid red;*/
 }
 
@@ -193,6 +205,7 @@ body {
 
 .gameTableHeader:nth-child(1)
 {
+	font-weight: normal;
 	padding-right: 5px;
 	width: 30%;
 }

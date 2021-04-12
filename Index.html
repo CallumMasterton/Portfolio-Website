@@ -2,275 +2,15 @@
 <html>
 <head>
 	<link rel="stylesheet" href="style.css">
+	<script src="js\ghostCursor.js"></script>
+	<script async src="js\functions.js"></script>
 
-		<script>/* This is a clock */
-            var time, h, m, s, track;
-            track = 0;
-            window.onload = function() { setInterval(timeNow,100); }
-
-            function timeNow() {
-
-              time = new Date();
-              track += 1;
-              h = time.getHours();
-              m = time.getMinutes();
-              s = time.getSeconds();
-			  if ( h < 10 ) { h = "0" + h; }
-			  if ( m < 10 ) { m = "0" + m; }
-              if ( s < 10 ) { s = "0" + s; } /* we add a 0 in front of s, when it is lower than 10, because that's what most clocks display, this is for the human user rather than for any need by the computer */
-              document.getElementById("time").innerHTML = h + ':' + m + ':' + s;
-            }
-
-        </script>
-		
-		
-		<script>
-			var firstPass = true;
-			
-			var activeF = false;
-			var activeE = false;
-			var activeU = false;
-			
-			
-			function hideBoxElementFiles() {/* This hides the box of files*/
-			
-				var filesBox = document.getElementById("boxhiderfiles");
-				var emailBox = document.getElementById("boxhideremail");
-				var userBox = document.getElementById("boxhidereuser");
-				var ebBox = document.getElementById("boxhidereeb");	
-				var lazerBox = document.getElementById("boxhiderelazer");
-				var arunnerBox = document.getElementById("boxhiderearunner");
-				var daveBox = document.getElementById("boxhideredave");
-			
-				if (firstPass == true)
-				{
-					filesBox.style.display = "block";
-					emailBox.style.display = "none";
-					userBox.style.display = "none";
-					ebBox.style.display = "none";
-					lazerBox.style.display = "none";
-					arunnerBox.style.display = "none";
-					daveBox.style.display = "none";
-					firstPass = false;
-				}
-				else 
-				{
-					if (filesBox.style.display === "none") {
-						filesBox.style.display = "block";
-						emailBox.style.display = "none";
-						userBox.style.display = "none";
-						ebBox.style.display = "none";
-						lazerBox.style.display = "none";
-						arunnerBox.style.display = "none";
-						daveBox.style.display = "none";
-					} else {
-						filesBox.style.display = "none";
-					}
-				}
-
-			}
-						
-			function hideBoxElementEmail() {/* This hides the box of Email*/
-			
-				var filesBox = document.getElementById("boxhiderfiles");
-				var emailBox = document.getElementById("boxhideremail");
-				var userBox = document.getElementById("boxhidereuser");
-				var ebBox = document.getElementById("boxhidereeb");		
-				var lazerBox = document.getElementById("boxhiderelazer");
-				var arunnerBox = document.getElementById("boxhiderearunner");
-				var daveBox = document.getElementById("boxhideredave");
-			
-				if (firstPass == true)
-				{
-					emailBox.style.display = "block";
-					filesBox.style.display = "none";
-					userBox.style.display = "none";
-					ebBox.style.display = "none";
-					lazerBox.style.display = "none";
-					arunnerBox.style.display = "none";
-					daveBox.style.display = "none";
-					firstPass = false;
-				}
-				else 
-				{
-					if (emailBox.style.display === "none") {
-						emailBox.style.display = "block";
-						filesBox.style.display = "none";
-						userBox.style.display = "none";
-						ebBox.style.display = "none";
-						lazerBox.style.display = "none";
-						arunnerBox.style.display = "none";
-						daveBox.style.display = "none";
-						
-					} else {
-						emailBox.style.display = "none";
-					}
-				}
-
-			}
-			
-			function hideBoxElementUser() {/* This hides the box of User*/
-			
-				var filesBox = document.getElementById("boxhiderfiles");
-				var emailBox = document.getElementById("boxhideremail");
-				var userBox = document.getElementById("boxhidereuser");	
-				var ebBox = document.getElementById("boxhidereeb");	
-				var lazerBox = document.getElementById("boxhiderelazer");
-				var arunnerBox = document.getElementById("boxhiderearunner");
-				var daveBox = document.getElementById("boxhideredave");
-			
-				if (firstPass == true)
-				{
-					userBox.style.display = "block";
-					filesBox.style.display = "none";
-					emailBox.style.display = "none";
-					ebBox.style.display = "none";
-					lazerBox.style.display = "none";
-					arunnerBox.style.display = "none";
-					daveBox.style.display = "none";
-					firstPass = false;
-				}
-				else 
-				{
-					if (userBox.style.display === "none") {
-						userBox.style.display = "block";
-						filesBox.style.display = "none";
-						emailBox.style.display = "none";
-						ebBox.style.display = "none";
-						lazerBox.style.display = "none";
-						arunnerBox.style.display = "none";
-						daveBox.style.display = "none";
-					} else {
-						userBox.style.display = "none";
-					}
-				}
-
-			}
-
-			function hideBoxElementEB() {/* This hides the box of Eye*/
-			
-				var filesBox = document.getElementById("boxhiderfiles");
-				var emailBox = document.getElementById("boxhideremail");
-				var userBox = document.getElementById("boxhidereuser");
-				var ebBox = document.getElementById("boxhidereeb");	
-			
-				if (firstPass == true)
-				{
-					ebBox.style.display = "block";
-					userBox.style.display = "none";
-					filesBox.style.display = "none";
-					emailBox.style.display = "none";
-					firstPass = false;
-				}
-				else 
-				{
-					if (ebBox.style.display === "none") {
-						ebBox.style.display = "block";
-						userBox.style.display = "none";
-						filesBox.style.display = "none";
-						emailBox.style.display = "none";
-					} else {
-						ebBox.style.display = "none";
-					}
-				}
-
-			}
-			
-			function hideBoxElementLazer() {/* This hides the box of Lazer*/
-			
-				var filesBox = document.getElementById("boxhiderfiles");
-				var emailBox = document.getElementById("boxhideremail");
-				var userBox = document.getElementById("boxhidereuser");
-				var lazerBox = document.getElementById("boxhiderelazer");				
-			
-				if (firstPass == true)
-				{
-					lazerBox.style.display = "block";
-					userBox.style.display = "none";
-					filesBox.style.display = "none";
-					emailBox.style.display = "none";
-					firstPass = false;
-				}
-				else 
-				{
-					if (lazerBox.style.display === "none") {
-						lazerBox.style.display = "block";
-						userBox.style.display = "none";
-						filesBox.style.display = "none";
-						emailBox.style.display = "none";
-					} else {
-						lazerBox.style.display = "none";
-					}
-				}
-
-			}
-			
-			function hideBoxElementARunner() {/* This hides the box of Runner*/
-			
-				var filesBox = document.getElementById("boxhiderfiles");
-				var emailBox = document.getElementById("boxhideremail");
-				var userBox = document.getElementById("boxhidereuser");
-				var arunnerBox = document.getElementById("boxhiderearunner");
-				
-			
-				if (firstPass == true)
-				{
-					arunnerBox.style.display = "block";
-					userBox.style.display = "none";
-					filesBox.style.display = "none";
-					emailBox.style.display = "none";
-					firstPass = false;
-				}
-				else 
-				{
-					if (arunnerBox.style.display === "none") {
-						arunnerBox.style.display = "block";
-						userBox.style.display = "none";
-						filesBox.style.display = "none";
-						emailBox.style.display = "none";
-					} else {
-						arunnerBox.style.display = "none";
-					}
-				}
-
-			}
-
-			function hideBoxElementDaveShift() {/* This hides the box of Dave*/
-			
-				var filesBox = document.getElementById("boxhiderfiles");
-				var emailBox = document.getElementById("boxhideremail");
-				var userBox = document.getElementById("boxhidereuser");
-				var daveBox = document.getElementById("boxhideredave");
-				
-			
-				if (firstPass == true)
-				{
-					daveBox.style.display = "block";
-					userBox.style.display = "none";
-					filesBox.style.display = "none";
-					emailBox.style.display = "none";
-					firstPass = false;
-				}
-				else 
-				{
-					if (daveBox.style.display === "none") {
-						daveBox.style.display = "block";
-						userBox.style.display = "none";
-						filesBox.style.display = "none";
-						emailBox.style.display = "none";
-					} else {
-						daveBox.style.display = "none";
-					}
-				}
-
-			}
-
-		</script>
 		
 </head>
-<body>
 
-<div style ="padding-right: 30px; padding-left: 30px;">
+<body>
+<div class=bodySpace id="ghost"> 
+<div  style ="padding-right: 30px; padding-left: 30px;" >
 
 	<div class=windowBox id="boxhiderfiles">
 		<div class=box>
@@ -329,7 +69,12 @@
 	
 			<div class=dataBox>
 				Email: callumamasterton@gmail.com
+				<br>
 				<br>Phone Number: <i>07939416130</i>
+				<br>
+				<br>Itch.io: <a href="https://tescosfinest.itch.io" target="_blank">www.itch.io</a>
+				<br>
+				<br>LinkedIn: <a href="https://www.linkedin.com/in/callum-masterton-121122172" target="_blank">www.linkedin.com</a>
 			</div>
 		</div>
 	</div>
@@ -354,10 +99,18 @@
 						<li>C#</li>
 						<li>Unity</li> 
 						<li>C++</li> 
-						<li>HYML (apparently)</li> 
+						<li>HTML (apparently)</li> 
 					</ul>
-				Occupation: Currently third year at Birmingham City University
-				
+				Occupation: Currently third year at Birmingham City University on the Computer Games Technology
+				<br>
+				<br>Current Grades: 
+				<ul style = "margin-top: 0px;">
+						<li>3D Game Development: 75/100 - First</li>
+						<li>C++ Programming for Games: 82/100 - First</li> 
+						<li>Quality of Service in Network Environments: 72/100 - First</li> 
+						<li>Artificial Intelligence for Games: 71/100 - First</li> 
+						<li>Mobile Game Development: 68/100 - 2:1</li> 
+					</ul>
 			</div>
 		</div>
 	</div>
@@ -387,6 +140,9 @@
 								<br>This project uses BFS and A* pathfinding, 
 								<br>Finite state machine and behavior trees, 
 								<br>Boids and crowding and some simple machine learning
+								<br>Grade achived on this was: 71/100 - First
+								<br>
+								<br><a href="https://tescosfinest.itch.io/eye-of-the-beholder" target="_blank">Click here to play it</a>
 							</div>
 						</th>
 						<th class=gameTableHeader>
@@ -424,6 +180,9 @@
 								<br>Lazer is a fun little Arcade game were the player tilts the phone to dodge lasers.
 								<br>This project uses the weather to change the difficulty of the game
 								<br>and even has a online leaderboard which you can log your scores ether anonymously or loged in.
+								<br>Grade achived on this was: 68/100 - 2:1
+								<br>
+								<br><a href="https://tescosfinest.itch.io/lazer" target="_blank">Click here to play it</a>
 							</div>
 						</th>
 						<th class=gameTableHeader>
@@ -460,6 +219,9 @@
 								<br>This is a C++ game made for a project in my second year at university.
 								<br>In this game you have the ability to rotate your turret to aim and shoot
 								<br>trucks to fill you power bar to then charge the enemy. 
+								<br>Grade achived on this was: 81/100 - First
+								<br>
+								<br><a href="https://tescosfinest.itch.io/ardennes-runner" target="_blank">Click here to play it</a>
 							</div>
 						</th>
 						<th class=gameTableHeader>
@@ -497,6 +259,9 @@
 								<br>The game is a escape room game I personly made the players ability, movement and Level 3.
 								<br>In Level 3 you had to flip switches in a order to open the door but the player 
 								<br>has to collect keys to unlcok doors along the way.
+								<br>Grade achived on this was: 75/100 - First
+								<br>
+								<br><a href="https://tescosfinest.itch.io/night-shift" target="_blank">Click here to play it</a>
 							</div>
 						</th>
 						<th class=gameTableHeader>
@@ -528,10 +293,10 @@
 				<button onclick="hideBoxElementEmail()">Email</button>
 			</div>
 			</th> 
-			<th class="bottomBarData">     </th> 
 			<th id = "time" class="bottomBarData"></th>
 		</tr>
 	</table>
+</div>
 </div>
 
 </body>
