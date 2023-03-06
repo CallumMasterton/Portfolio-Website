@@ -6,7 +6,7 @@
 
 html,body {
 	background-color: #add8e6;
-	background-image: url("Pictures/Background.png");
+	/*background-image: url("Pictures/Background.png");*/
 	font-family: pixelFont;
 	overflow: none;
 	font-size: 25px;
