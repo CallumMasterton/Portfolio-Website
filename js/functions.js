@@ -35,6 +35,7 @@
 				var lazerBox = document.getElementById("boxhiderelazer");
 				var arunnerBox = document.getElementById("boxhiderearunner");
 				var daveBox = document.getElementById("boxhideredave");
+				var rootBox = document.getElementById("boxhidereroot");
 			
 				if (firstPass == true)
 				{
@@ -45,6 +46,7 @@
 					lazerBox.style.display = "none";
 					arunnerBox.style.display = "none";
 					daveBox.style.display = "none";
+					rootBox.style.display = "none";
 					firstPass = false;
 				}
 				else 
@@ -57,6 +59,7 @@
 						lazerBox.style.display = "none";
 						arunnerBox.style.display = "none";
 						daveBox.style.display = "none";
+						rootBox.style.display = "none";
 					} else {
 						filesBox.style.display = "none";
 					}
@@ -73,6 +76,7 @@
 				var lazerBox = document.getElementById("boxhiderelazer");
 				var arunnerBox = document.getElementById("boxhiderearunner");
 				var daveBox = document.getElementById("boxhideredave");
+				var rootBox = document.getElementById("boxhidereroot");
 			
 				if (firstPass == true)
 				{
@@ -83,6 +87,7 @@
 					lazerBox.style.display = "none";
 					arunnerBox.style.display = "none";
 					daveBox.style.display = "none";
+					rootBox.style.display = "none";
 					firstPass = false;
 				}
 				else 
@@ -95,6 +100,7 @@
 						lazerBox.style.display = "none";
 						arunnerBox.style.display = "none";
 						daveBox.style.display = "none";
+						rootBox.style.display = "none";
 						
 					} else {
 						emailBox.style.display = "none";
@@ -112,6 +118,7 @@
 				var lazerBox = document.getElementById("boxhiderelazer");
 				var arunnerBox = document.getElementById("boxhiderearunner");
 				var daveBox = document.getElementById("boxhideredave");
+				var rootBox = document.getElementById("boxhidereroot");
 			
 				if (firstPass == true)
 				{
@@ -122,6 +129,7 @@
 					lazerBox.style.display = "none";
 					arunnerBox.style.display = "none";
 					daveBox.style.display = "none";
+					rootBox.style.display = "none";
 					firstPass = false;
 				}
 				else 
@@ -134,6 +142,7 @@
 						lazerBox.style.display = "none";
 						arunnerBox.style.display = "none";
 						daveBox.style.display = "none";
+						rootBox.style.display = "none";
 					} else {
 						userBox.style.display = "none";
 					}
@@ -254,6 +263,36 @@
 						emailBox.style.display = "none";
 					} else {
 						daveBox.style.display = "none";
+					}
+				}
+
+			}
+			
+			function hideBoxElementRootSystem() {/* This hides the box of Root*/
+			
+				var filesBox = document.getElementById("boxhiderfiles");
+				var emailBox = document.getElementById("boxhideremail");
+				var userBox = document.getElementById("boxhidereuser");
+				var rootBox = document.getElementById("boxhidereroot");
+				
+			
+				if (firstPass == true)
+				{
+					rootBox.style.display = "block";
+					userBox.style.display = "none";
+					filesBox.style.display = "none";
+					emailBox.style.display = "none";
+					firstPass = false;
+				}
+				else 
+				{
+					if (rootBox.style.display === "none") {
+						rootBox.style.display = "block";
+						userBox.style.display = "none";
+						filesBox.style.display = "none";
+						emailBox.style.display = "none";
+					} else {
+						rootBox.style.display = "none";
 					}
 				}
 
